@@ -1,6 +1,14 @@
-- name: Adds ondrej repos
+- name: Add repository key (https://packages.sury.org/php)
+  apt_key:
+    url: "https://packages.sury.org/php/apt.gpg"
+    keyring: /etc/apt/trusted.gpg.d/php.gpg
+    state: present
+    validate_certs: no
+
+- name: Add php repository (https://packages.sury.org/php)
   apt_repository:
-    repo: "ppa:ondrej/php"
+    repo: deb https://packages.sury.org/php/ {{ansible_distribution_release}} main
+    state: present
     update_cache: yes
 
 - name: Show selected php7_version
