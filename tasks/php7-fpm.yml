@@ -24,7 +24,6 @@
     - Restart php7-fpm
   with_items:
     - php{{ php7_version }}-fpm
-    - composer
     - php-apcu
     - php-pear
     - php{{ php7_version }}-bz2
