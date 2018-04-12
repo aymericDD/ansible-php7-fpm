@@ -33,7 +33,7 @@
     - php{{ php7_version }}-intl
     - php{{ php7_version }}-mbstring
     - php{{ php7_version }}-mcrypt
-    - php{{ php7_version }}-mysql
+    - php{{ php7_version }}-pgsql
     - php{{ php7_version }}-opcache
     - php{{ php7_version }}-readline
     - php{{ php7_version }}-xml
